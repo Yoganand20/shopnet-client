@@ -1,7 +1,7 @@
 import { Outlet } from "react-router";
 export default function AuthPage() {
   return (
-    <div className="min-h-screen min-w-screen flex items-center justify-center">
+    <div className="flex flex-1 h-full min-w-screen items-center justify-center">
       <Outlet />
     </div>
   );
