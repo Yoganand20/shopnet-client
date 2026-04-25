@@ -21,7 +21,7 @@ export default function NavMenu({ categories }: NavMenuProp) {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            <Link to="/">Home</Link>
+            <Link to="/home">Home</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
 
@@ -44,7 +44,7 @@ export default function NavMenu({ categories }: NavMenuProp) {
 
         <NavigationMenuItem>
           <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            <Link to="/about">About</Link>
+            <Link to="/about-us">About</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
 

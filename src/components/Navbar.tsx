@@ -7,11 +7,8 @@ import { useEffect } from "react";
 function Logo() {
   return (
     <div className="shrink-0 content-center">
-      <Link
-        to="/auth/login"
-        className="text-xl font-serif font-bold text-foreground"
-      >
-        NexTune
+      <Link to="/home" className="text-xl font-serif font-bold text-foreground">
+        ShopNet
       </Link>
     </div>
   );
@@ -31,11 +28,11 @@ export default function Navbar() {
     });
   }, []);
   return (
-    <div className="h-12 flex flex-row justify-between px-5 mt-2">
+    <div className="h-12 flex flex-row justify-between items-center z-100">
       <Logo />
 
       <NavigationMenu categories={categories}></NavigationMenu>
-      <div className="flex flex-row justify-end">
+      <div className="flex flex-row justify-end items-center">
         <ThemeToggle />
       </div>
     </div>

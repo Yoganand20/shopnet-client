@@ -9,13 +9,19 @@ import EmailVerificationForm from "./components/form/EmailVerificationForm";
 import LoadingOverlay from "./components/LoadingOverlay";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
+import Footer from "./components/Footer";
+import ContactUsPage from "./pages/ContactUsPage";
+import ListingPage from "./pages/ListingPage";
+import AboutUsPage from "./pages/AboutUsPage";
 function App() {
   return (
     <>
       <LoadingOverlay />
-      <div className="flex flex-col min-h-screen ">
-        <Navbar />
-        <div className="flex-1 h-full flex flex-col">
+      <div className="flex flex-col min-h-screen px-10">
+        <div className="">
+          <Navbar />
+        </div>
+        <div className="flex-1 h-full flex flex-col p-5">
           <Routes>
             <Route path="/auth" element={<AuthPage />}>
               <Route
@@ -39,7 +45,13 @@ function App() {
               />
             </Route>
             <Route path="/home" element={<HomePage />} />
+            <Route path="/product" element={<ListingPage />} />
+            <Route path="/contact-us" element={<ContactUsPage />} />
+            <Route path="/about-us" element={<AboutUsPage />} />
           </Routes>
+        </div>
+        <div className="mt-5">
+          <Footer />
         </div>
       </div>
     </>
