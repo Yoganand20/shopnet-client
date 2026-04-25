@@ -136,7 +136,6 @@ export default function LoginForm() {
         <Field orientation="horizontal">
           <Button
             type="submit"
-            className="w-15"
             form="login-form"
             disabled={loading}
           >

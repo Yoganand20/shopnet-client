@@ -160,7 +160,6 @@ export default function SignUpForm() {
         <Field orientation="horizontal">
           <Button
             type="submit"
-            className="w-15"
             form="signup-form"
             disabled={loading}
           >

@@ -109,7 +109,6 @@ export default function EmailVerificationForm() {
         <Field orientation="horizontal">
           <Button
             type="submit"
-            className="w-15"
             form="reset-password-form"
             disabled={loading}
           >

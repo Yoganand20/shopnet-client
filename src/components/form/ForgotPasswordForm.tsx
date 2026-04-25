@@ -94,7 +94,6 @@ export default function ForgotPasswordForm() {
         <Field orientation="horizontal">
           <Button
             type="submit"
-            className="w-15"
             form="forgot-password-form"
             disabled={loading}
           >
