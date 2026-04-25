@@ -21,10 +21,11 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
 
-    /* shadcn */
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@component/*": ["./src/components/*"],
+      "@lib/*": ["./src/lib/*"],
+      "@page/*": ["./src/pages/*"]
     }
   },
   "include": ["src"]
