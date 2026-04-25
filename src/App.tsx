@@ -18,7 +18,7 @@ function App() {
     <>
       <LoadingOverlay />
       <div className="flex flex-col min-h-screen px-10">
-        <div className="">
+        <div className="sticky top-0 z-1000">
           <Navbar />
         </div>
         <div className="flex-1 h-full flex flex-col p-5">

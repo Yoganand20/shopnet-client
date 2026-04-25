@@ -28,7 +28,7 @@ export default function Navbar() {
     });
   }, []);
   return (
-    <div className="h-12 flex flex-row justify-between items-center z-100">
+    <div className="h-12 flex flex-row justify-between items-center bg-background/80 backdrop-blur-md border-b border-border/50">
       <Logo />
 
       <NavigationMenu categories={categories}></NavigationMenu>
