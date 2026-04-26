@@ -9,7 +9,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Link } from "react-router";
-import type { Category } from "./Navbar";
+import type { Category } from "@/lib/types";
 
 interface NavMenuProp {
   categories: Category[];
@@ -20,8 +20,11 @@ export default function NavMenu({ categories }: NavMenuProp) {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            <Link to="/home">Home</Link>
+          <NavigationMenuLink
+            href="/home"
+            className={navigationMenuTriggerStyle()}
+          >
+            Home
           </NavigationMenuLink>
         </NavigationMenuItem>
 
@@ -43,14 +46,20 @@ export default function NavMenu({ categories }: NavMenuProp) {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            <Link to="/about-us">About</Link>
+          <NavigationMenuLink
+            href="/about-us"
+            className={navigationMenuTriggerStyle()}
+          >
+            About
           </NavigationMenuLink>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            <Link to="/contact-us">Contact Us</Link>
+          <NavigationMenuLink
+            href="/contact-us"
+            className={navigationMenuTriggerStyle()}
+          >
+            Contact Us
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
@@ -66,13 +75,11 @@ function ListItem({
 }: React.ComponentPropsWithoutRef<"li"> & { url: string }) {
   return (
     <li {...props}>
-      <NavigationMenuLink>
-        <Link to={url}>
-          <div className="flex flex-col gap-1 text-sm">
-            <div className="leading-none font-medium">{title}</div>
-            <div className="text-muted-foreground line-clamp-2">{children}</div>
-          </div>
-        </Link>
+      <NavigationMenuLink href={url}>
+        <div className="flex flex-col gap-1 text-sm">
+          <div className="leading-none font-medium">{title}</div>
+          <div className="text-muted-foreground line-clamp-2">{children}</div>
+        </div>
       </NavigationMenuLink>
     </li>
   );

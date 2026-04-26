@@ -3,6 +3,7 @@ import { ThemeToggle } from "./ThemeToggle";
 import { axiosInstance } from "@/lib/axios";
 import NavigationMenu from "@/components/NavigationMenu";
 import { useEffect } from "react";
+import type { Category } from "@/lib/types";
 
 function Logo() {
   return (
@@ -12,12 +13,6 @@ function Logo() {
       </Link>
     </div>
   );
-}
-export interface Category {
-  id: number;
-  name: string;
-  description?: string;
-  level?: number;
 }
 
 export default function Navbar() {

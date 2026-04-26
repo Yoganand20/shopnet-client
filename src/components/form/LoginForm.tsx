@@ -11,10 +11,11 @@ import {
 import { FieldGroup, Field, FieldLabel, FieldError } from "../ui/field";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import { useAuthStore, type User } from "@/lib/authStore";
+import { useAuthStore } from "@/lib/authStore";
 import { axiosInstance } from "@/lib/axios";
 import { Link, useNavigate } from "react-router";
 import { useAppStore } from "@/lib/appStore";
+import type { User } from "@/lib/types";
 
 const loginSchema = z.object({
   email: z

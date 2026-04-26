@@ -10,13 +10,14 @@ import {
 } from "../ui/card";
 import { FieldGroup, Field, FieldLabel, FieldError } from "../ui/field";
 import { Button } from "../ui/button";
-import { useAuthStore, type User } from "@/lib/authStore";
+import { useAuthStore } from "@/lib/authStore";
 import { useAppStore } from "@/lib/appStore";
 import { LoaderCircle } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { axiosInstance } from "@/lib/axios";
 import { InputOTP, InputOTPGroup, InputOTPSlot } from "../ui/input-otp";
 import { useNavigate } from "react-router";
+import type { User } from "@/lib/types";
 
 const verifyEmailSchema = z.object({
   verificationCode: z

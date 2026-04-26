@@ -11,12 +11,13 @@ import {
 import { FieldGroup, Field, FieldLabel, FieldError } from "../ui/field";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import { useAuthStore, type User } from "@/lib/authStore";
+import { useAuthStore } from "@/lib/authStore";
 import { LoaderCircle } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { axiosInstance } from "@/lib/axios";
 import { InputOTP, InputOTPGroup, InputOTPSlot } from "../ui/input-otp";
 import { useAppStore } from "@/lib/appStore";
+import type { User } from "@/lib/types";
 
 const resetPasswordSchema = z.object({
   verificationCode: z
