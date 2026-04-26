@@ -8,30 +8,10 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import type { Category } from "./Navbar";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Heart, ShoppingCart } from "@hugeicons/core-free-icons";
+import type { Product } from "@/lib/types";
 
-export interface ProductAttribute {
-  attributeId: number;
-  attributeType: string;
-  attributeDescription: string;
-  value: string;
-}
-export interface Brand {
-  id: number;
-  name: string;
-}
-export interface Product {
-  id: number;
-  name: string;
-  description?: string;
-  price: number;
-  brand: Brand;
-  category: Category;
-  imageUrls: string[];
-  attributes?: ProductAttribute[];
-}
 interface ProductCardProps {
   product: Product;
 }

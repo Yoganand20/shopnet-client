@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 import ContactUsPage from "./pages/ContactUsPage";
 import ListingPage from "./pages/ListingPage";
 import AboutUsPage from "./pages/AboutUsPage";
+import ProductPage from "./pages/ProductPage";
 function App() {
   return (
     <>
@@ -45,7 +46,9 @@ function App() {
               />
             </Route>
             <Route path="/home" element={<HomePage />} />
-            <Route path="/product" element={<ListingPage />} />
+            <Route path="/products" element={<ListingPage />} />
+            <Route path="/product/:id" element={<ProductPage />} />
+
             <Route path="/contact-us" element={<ContactUsPage />} />
             <Route path="/about-us" element={<AboutUsPage />} />
           </Routes>
