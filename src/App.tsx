@@ -14,6 +14,8 @@ import ContactUsPage from "./pages/ContactUsPage";
 import ListingPage from "./pages/ListingPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import ProductPage from "./pages/ProductPage";
+import CartPage from "./pages/CartPage";
+import WishlistPage from "./pages/WishListPage";
 function App() {
   return (
     <>
@@ -47,8 +49,9 @@ function App() {
             </Route>
             <Route path="/home" element={<HomePage />} />
             <Route path="/products" element={<ListingPage />} />
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="/wishlist" element={<WishlistPage />} />
             <Route path="/product/:id" element={<ProductPage />} />
-
             <Route path="/contact-us" element={<ContactUsPage />} />
             <Route path="/about-us" element={<AboutUsPage />} />
           </Routes>
