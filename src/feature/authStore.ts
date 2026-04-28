@@ -1,5 +1,5 @@
+import type { User } from "@/lib/types";
 import { create } from "zustand";
-import type { User } from "./types";
 
 interface AuthState {
   user: User | null;

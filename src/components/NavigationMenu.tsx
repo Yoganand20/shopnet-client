@@ -8,7 +8,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { Link } from "react-router";
 import type { Category } from "@/lib/types";
 
 interface NavMenuProp {

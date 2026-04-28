@@ -11,10 +11,10 @@ import {
 import { FieldGroup, Field, FieldLabel, FieldError } from "../ui/field";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import { useAuthStore } from "@/lib/authStore";
-import { axiosInstance } from "@/lib/axios";
+import { useAuthStore } from "@/feature/authStore";
+import { axiosInstance } from "@/services/axios";
 import { Link, useNavigate } from "react-router";
-import { useAppStore } from "@/lib/appStore";
+import { useAppStore } from "@/feature/appStore";
 import type { User } from "@/lib/types";
 
 const loginSchema = z.object({
@@ -135,11 +135,7 @@ export default function LoginForm() {
       </CardContent>
       <CardFooter className="flex flex-col gap-3">
         <Field orientation="horizontal">
-          <Button
-            type="submit"
-            form="login-form"
-            disabled={loading}
-          >
+          <Button type="submit" form="login-form" disabled={loading}>
             Login
           </Button>
         </Field>

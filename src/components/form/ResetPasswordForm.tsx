@@ -11,12 +11,12 @@ import {
 import { FieldGroup, Field, FieldLabel, FieldError } from "../ui/field";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import { useAuthStore } from "@/lib/authStore";
+import { useAuthStore } from "@/feature/authStore";
 import { LoaderCircle } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { axiosInstance } from "@/lib/axios";
+import { axiosInstance } from "@/services/axios";
 import { InputOTP, InputOTPGroup, InputOTPSlot } from "../ui/input-otp";
-import { useAppStore } from "@/lib/appStore";
+import { useAppStore } from "@/feature/appStore";
 import type { User } from "@/lib/types";
 
 const resetPasswordSchema = z.object({

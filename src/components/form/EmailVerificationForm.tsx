@@ -10,11 +10,11 @@ import {
 } from "../ui/card";
 import { FieldGroup, Field, FieldLabel, FieldError } from "../ui/field";
 import { Button } from "../ui/button";
-import { useAuthStore } from "@/lib/authStore";
-import { useAppStore } from "@/lib/appStore";
+import { useAuthStore } from "@/feature/authStore";
+import { useAppStore } from "@/feature/appStore";
 import { LoaderCircle } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { axiosInstance } from "@/lib/axios";
+import { axiosInstance } from "@/services/axios";
 import { InputOTP, InputOTPGroup, InputOTPSlot } from "../ui/input-otp";
 import { useNavigate } from "react-router";
 import type { User } from "@/lib/types";

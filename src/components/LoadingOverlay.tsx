@@ -1,4 +1,4 @@
-import { useAppStore } from "@/lib/appStore";
+import { useAppStore } from "@/feature/appStore";
 import { cn } from "@/lib/utils";
 import { LoaderCircle } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";

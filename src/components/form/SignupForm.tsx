@@ -11,9 +11,9 @@ import {
 import { FieldGroup, Field, FieldLabel, FieldError } from "../ui/field";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import { axiosInstance } from "@/lib/axios";
+import { axiosInstance } from "@/services/axios";
 import { Link } from "react-router";
-import { useAppStore } from "@/lib/appStore";
+import { useAppStore } from "@/feature/appStore";
 
 const signupSchema = z
   .object({
@@ -158,11 +158,7 @@ export default function SignUpForm() {
       </CardContent>
       <CardFooter className="flex flex-col gap-3">
         <Field orientation="horizontal">
-          <Button
-            type="submit"
-            form="signup-form"
-            disabled={loading}
-          >
+          <Button type="submit" form="signup-form" disabled={loading}>
             Sign Up
           </Button>
         </Field>

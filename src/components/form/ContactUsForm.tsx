@@ -11,7 +11,7 @@ import {
 import { FieldGroup, Field, FieldLabel, FieldError } from "../ui/field";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import { useAppStore } from "@/lib/appStore";
+import { useAppStore } from "@/feature/appStore";
 import { Textarea } from "../ui/textarea";
 import {
   Select,

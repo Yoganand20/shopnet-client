@@ -10,7 +10,7 @@ import {
 } from "../ui/card";
 import { FieldGroup, Field, FieldLabel, FieldError } from "../ui/field";
 import { Button } from "../ui/button";
-import { useAppStore } from "@/lib/appStore";
+import { useAppStore } from "@/feature/appStore";
 import { Label } from "../ui/label";
 import {
   Select,

@@ -11,11 +11,11 @@ import {
 import { FieldGroup, Field, FieldLabel, FieldError } from "../ui/field";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import { useAuthStore } from "@/lib/authStore";
+import { useAuthStore } from "@/feature/authStore";
 import { LoaderCircle } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { axiosInstance } from "@/lib/axios";
-import { useAppStore } from "@/lib/appStore";
+import { axiosInstance } from "@/services/axios";
+import { useAppStore } from "@/feature/appStore";
 import type { User } from "@/lib/types";
 
 const forgotPasswordSchema = z.object({
@@ -93,11 +93,7 @@ export default function ForgotPasswordForm() {
       </CardContent>
       <CardFooter>
         <Field orientation="horizontal">
-          <Button
-            type="submit"
-            form="forgot-password-form"
-            disabled={loading}
-          >
+          <Button type="submit" form="forgot-password-form" disabled={loading}>
             {loading ? (
               <HugeiconsIcon
                 icon={LoaderCircle}
