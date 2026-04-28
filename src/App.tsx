@@ -16,6 +16,8 @@ import AboutUsPage from "./pages/AboutUsPage";
 import ProductPage from "./pages/ProductPage";
 import CartPage from "./pages/CartPage";
 import WishlistPage from "./pages/WishListPage";
+import CheckoutPage from "./pages/CheckoutPage";
+import SearchDemo from "./components/form/SearchDemo";
 function App() {
   return (
     <>
@@ -51,9 +53,11 @@ function App() {
             <Route path="/products" element={<ListingPage />} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="/wishlist" element={<WishlistPage />} />
+            <Route path="/checkout" element={<CheckoutPage />} />
             <Route path="/product/:id" element={<ProductPage />} />
             <Route path="/contact-us" element={<ContactUsPage />} />
             <Route path="/about-us" element={<AboutUsPage />} />
+            <Route path="/search-demo" element={<SearchDemo />} />
           </Routes>
         </div>
         <div className="mt-5">
