@@ -1,75 +1,98 @@
-# React + TypeScript + Vite
+# ShopNet - E-Commerce Client Storefront
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and fully functional customer-facing web application for the ShopNet e-commerce platform. This storefront allows users to seamlessly browse products, manage their shopping carts, and securely check out, providing a premium shopping experience powered by React, Shadcn UI, and Tailwind CSS.
 
-Currently, two official plugins are available:
+Server backend: https://github.com/Yoganand20/ShopNet-API  
+Admin frontend: https://github.com/Yoganand20/shopnet-admin
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Key Features
 
-## React Compiler
+- **Product Catalog & Search**: Browse categories, filter items, and search for specific products with real-time updates.
+- **Shopping Cart**: Add, remove, and update quantities of products in the cart with instant total calculations.
+- **User Authentication**: Secure user registration, login, and password management.
+- **Checkout & Payments**: Seamless checkout flow with address management and payment integration placeholders.
+- **User Profile & Order History**: Customers can view their account details, track current order statuses (Pending, Shipped, Delivered), and review past purchases.
+- **State Management**: Global state handling using Redux Toolkit for efficient cart and user session data flow.
+- **Modern UI/UX**: Clean, mobile-first interface using Shadcn UI components and Tailwind CSS.
+- **API Integration**: Centralized API calls using Axios.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Tech Stack
 
-Note: This will impact Vite dev & build performances.
+- **Frontend Framework**: React.js
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **UI Components**: Shadcn UI
+- **State Management**: Redux Toolkit
+- **HTTP Client**: Axios
+- **Routing**: React Router DOM
+- **Icons**: Lucide React
 
-## Expanding the ESLint configuration
+## Folder Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+src/
+├── assets/          # Static assets (images, banners, icons)
+├── components/      # Reusable UI components =
+│   ├── form/        # All the forms used in the application
+│   └── ui/          # Shadcn UI primitives
+├── features/        # Redux slices (cartSlice, authSlice, productSlice, etc.)
+├── hooks/           # Custom React hooks (e.g., useCart, useDebounce)
+├── pages/           # Page components (Home, ProductDetails, Cart, Checkout)
+├── services/        # API configuration and Axios interceptors
+├── lib/             # Helper functions (currency formatter, validation)
+├── App.jsx          # Main application component
+└── main.jsx         # Entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Follow these steps to set up the project locally.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
+
+Ensure you have the following installed:
+
+- Node.js (v16 or higher)
+
+- npm or yarn
+
+- shopnet-api
+
+### Installation
+
+1. Clone the repository
+
+```bash
+git clone [https://github.com/Yoganand20/shopnet-client.git](https://github.com/Yoganand20/shopnet-client.git)
+cd shopnet-client
+```
+
+2. Install dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Configure Environment Variable
+   Create a .env file in the root directory and add your API endpoint:
+
+```code
+VITE_API_BASE_URL=http://localhost:5000/api/v1
+```
+
+4. Start backend server
+   Clone and start backend server from [repo](https://github.com/Yoganand20/ShopNet-API)
+
+5. Run the development server
+
+```bash
+npm run dev
+```
+
+6. Build for production
+
+```bash
+npm run build
 ```
