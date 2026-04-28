@@ -33,3 +33,35 @@ export interface Product {
   imageUrls: string[];
   attributes?: ProductAttribute[];
 }
+
+export interface Address {
+  id: string;
+  type: string;
+  name: string;
+  street: string;
+  city: string;
+  state: string;
+  pincode: string;
+  mobile: string;
+}
+
+export interface CartItem {
+  product: Product;
+  quantity: number;
+}
+
+export interface WishlistItem {
+  product: Product;
+  addedAt: Date;
+}
+
+export interface Order {
+  id: string;
+  userId: string;
+  items: CartItem[];
+  address: Address;
+  paymentMethod: string;
+  total: number;
+  status: string;
+  createdAt: Date;
+}
