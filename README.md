@@ -63,7 +63,7 @@ Ensure you have the following installed:
 1. Clone the repository
 
 ```bash
-git clone [https://github.com/Yoganand20/shopnet-client.git](https://github.com/Yoganand20/shopnet-client.git)
+git clone https://github.com/Yoganand20/shopnet-client.git
 cd shopnet-client
 ```
 
